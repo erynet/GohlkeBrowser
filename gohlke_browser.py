@@ -254,7 +254,6 @@ class Telescope(object):
         return self.download(url=self.catd[idx][1], path=os.path.join(only_path, self.catd[idx][0]))
 
 
-
 class GohlkeBrowser(cmd.Cmd):
     intro = "Welcome to the GohlkeBrowser.\nType help or ? to list commands.\n"
     prompt_fmt = "[%s]>> "
@@ -329,7 +328,7 @@ class GohlkeBrowser(cmd.Cmd):
                 is_initial = False
 
             if is_complete:
-                print("100%%")
+                print("100%")
                 pip.main(["install", "--upgrade", os.path.join(only_path, fname)])
                 break
             else:
@@ -377,7 +376,7 @@ class GohlkeBrowser(cmd.Cmd):
                 is_initial = False
 
             if is_complete:
-                print("100%%")
+                print("100%")
                 print("%s ... done" % (os.path.join(only_path, fname),))
                 break
             else:
