@@ -119,7 +119,7 @@ class Telescope(object):
                 import cStringIO
                 sio = cStringIO.StringIO()
                 for i in range(len(mi)):
-                    sio.write(chr(ml[ord(mi[i]) - 48]))
+                    sio.write(chr(ml[ord(mi[i]) - 47]))
 
                 return sio.getvalue()
 
