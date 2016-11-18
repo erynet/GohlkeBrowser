@@ -119,7 +119,7 @@ class Telescope(object):
                 import cStringIO
                 sio = cStringIO.StringIO()
                 for i in range(len(mi)):
-                    sio.write(chr(ml[ord(mi[i]) - 48]))
+                    sio.write(chr(ml[ord(mi[i]) - 47]))
 
                 return sio.getvalue()
 
@@ -209,7 +209,7 @@ class Telescope(object):
             return self.files
 
         result = []
-        lower_keywords = map(str.lower, keywords)
+        lower_keywords = tuple(map(str.lower, keywords))
 
         for entry in self.files:
             is_ok = True
