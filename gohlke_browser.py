@@ -209,7 +209,7 @@ class Telescope(object):
             return self.files
 
         result = []
-        lower_keywords = map(str.lower, keywords)
+        lower_keywords = tuple(map(str.lower, keywords))
 
         for entry in self.files:
             is_ok = True
